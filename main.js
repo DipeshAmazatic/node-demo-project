@@ -17,7 +17,7 @@ const app = express();
 //   console.log("Connected to Postgres!!");
 // });
 
-mongoose.connect('mongodb+srv://dipesh:Dipesh12@cluster0.ec6czea.mongodb.net/test')
+mongoose.connect(process.env.DB)
 //mongoose.connect('mongodb://localhost/users')
   .then(() => console.log('Connected to MongoDB...'))
   .catch(err => console.log('Could not connect to MongoDB...'));
