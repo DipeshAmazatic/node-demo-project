@@ -20,7 +20,7 @@ const app = express();
 mongoose.connect(process.env.DB)
 //mongoose.connect('mongodb://localhost/users')
   .then(() => console.log('Connected to MongoDB...'))
-  .catch(err => console.log('Could not connect to MongoDB...'));
+  .catch(err => console.log('Could not connect to MongoDB...',err));
 // middleare function
 app.use(express.json());
 app.use('/api/users', users);
